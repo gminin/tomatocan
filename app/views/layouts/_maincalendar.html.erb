@@ -35,8 +35,8 @@
             <% end %>
           </td>
           <td class=col-xs-3>
-            <span id=calendar-time><%= event.start_at.strftime("%a, %b. %d") %></span>
-            <span id=calendar-time><%= event.start_at.strftime("%l:%M%P") %></span>
+            <span id=calendar-time><%= local_time(event.start_at, '%a, %b. %d') %></span>
+            <span id=calendar-time><%= local_time(event.start_at, '%l:%M%P %Z') %></span>
           </td>
           <td class=col-xs-3>
             <%= link_to "Join Discussion", "https://crowdpublishtv.herokuapp.com/" + user.permalink, class: "btn btn-primary btn-sm" %>

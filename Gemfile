@@ -40,6 +40,8 @@ gem 'friendly_id', '~> 5.0.0'
 #gem "paperclip", "~> 2.0"
 #gem 'rmagick'
 
+gem 'local_time'
+
 group :test, :development do
 #  gem 'factory_girl_rails'
 #  gem 'capybara'
