@@ -31,7 +31,7 @@
                 Hosted by: <%= link_to user.name, user.permalink, id: "calendar-host" %>
               <% end %>
             <% else %>
-              Hosted by: <%= link_to user.name, user.permalink, id: "calendar-host" %>
+              <span id=calendar-host>Hosted by: <%= link_to user.name, user.permalink %></span>
             <% end %>
           </td>
           <td class=col-xs-3>
