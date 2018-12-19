@@ -34,16 +34,12 @@
     
     <%= render 'layouts/header' %>
 
-    <main>
-        <%= yield %>
+    <main class="container">
+      <%= render 'layouts/flash_messages' %>
+      <%= yield %>
     </main>
 
     <%= render 'layouts/footer' %>
-
-    <% #= devise_error_messages! %>
-    <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-    <% end %>
 
 </body>
 </html>
