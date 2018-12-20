@@ -1,10 +1,6 @@
-<div class="row">
-  <div class="col-xs-12">
-    <% flash.each do |name, msg| %>
-      <div class="alert alert-<%= name %> alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
-        <%= simple_format msg.gsub(/\n/, '<br>') %>
-      </div>
-    <% end %>
+<% flash.each do |type, message| %>
+  <div class="alert <%= bootstrap_class_for(type) %> alert-dismissable fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= message %>
   </div>
-</div>
+<% end %>

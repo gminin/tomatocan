@@ -489,3 +489,14 @@ Tasks for week of December 17, 2018
 Monday, December 17, 2018
   - Added Stripe connect alert to control panel
   - Tried about ten thousand ways to display event times in user's timezone without a gem, but finally settled on basecamp's local_time.
+  
+Tuesday, December 18, 2018
+  - Alerts
+    - Removed several devise_error messages and used the render flash_messages method instead for displaying alerts.
+    
+Wednesday, December 19, 2018
+  - Alerts
+    - Okay, guess we needed the seperate DeviseHelper so it's back.
+    - Alerts on Sign Up form currently are just an inline text
+    - Alerts on Home page need to overlay the image instead of moving it
+  

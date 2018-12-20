@@ -42,16 +42,17 @@
 
 <div class="row">
     <div class="col-md-6 col-md-offet-2">
-
+        <%= render 'layouts/flash_messages' %>
+      
         <%= form_for(@merchandise) do |f| %>
         <% if @merchandise.errors.any? %>
-        <div id="error_explanation">
-            <h3><%= pluralize(@merchandise.errors.count, "error") %> prohibited this merchandise from being saved:</h3>
-            <ul> <% @merchandise.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-                <% end %>
-            </ul>
-        </div>
+          <div class="alert alert-danger">
+              <%= pluralize(@merchandise.errors.count, "error") %> prohibited this merchandise from being saved:
+              <ul> <% @merchandise.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                  <% end %>
+              </ul>
+          </div>
         <% end %>
 
         <div class="form-group">
