@@ -499,4 +499,24 @@ Wednesday, December 19, 2018
     - Okay, guess we needed the seperate DeviseHelper so it's back.
     - Alerts on Sign Up form currently are just an inline text
     - Alerts on Home page need to overlay the image instead of moving it
-  
+
+========================================
+Tasks for week of December 31, 2018
+  - Purchase receipt
+    - Success message
+    - Button to seller's page
+    - Seller message
+  - Manage events panel
+    - View past events
+      - Recordings
+      - Repeat?
+    - View next event
+      - Start button
+      - 
+    - View upcoming events
+      - List of events
+      - Edit/cancel
+      
+Wednesday, January 2, 2019
+  - purchases/new
+    - Rebuilding form with Stripe Elements on Stripe.js v3 instead of v2

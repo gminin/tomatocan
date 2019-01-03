@@ -1,0 +1,25 @@
+<div class=row>
+  <div class=col-xs-12>
+    <div id=receipt-header>
+      <%= image_tag("maroonLogo.png", id: "receipt-logo") %>
+    </div>
+  </div>
+</div>
+<div classs="row">
+  <div class=col-xs-12>
+    <div id=receipt-body>
+      <% if (!@purchase.merchandise_id.nil?) %>
+        <h3>Thank you for your donation!</h3>
+      <% else %>
+        <h3>Thank you for your purchase of<br><%= @itemname %>!</h3>
+      <% end %>
+      <span id=receipt-price><!--TODO: perk price--></span>
+      <h3 id=""><!--TODO: seller name--></h3>
+      <div id=receipt-info>
+        <span class=pull-left>Card ending in <%= @last4 %></span>
+        <span class=pull-right><!--TODO: purchase date--></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</div>
