@@ -523,3 +523,22 @@ Wednesday, January 2, 2019
     
 Friday, January 4, 2019
   - Tech support
+  
+========================================
+Tasks for week of January 7, 2019
+  - Upgrade from Stripe.js v2 to v3
+  - Write instructions for connecting Stripe test data to local machines and AWS S3 buckets to local machines
+
+Friday, January 11, 2019
+  - Tech support
+  - Written directions for connecting Stripe
+    Stripe
+      1. Login to dashboard.stripe.com
+      2. In the left-hand sidebar, toggle “View test data” to On.
+      3. Go to Developers > API Keys
+      4. Copy the Publishable key to your config/initializers/aakeys.rb file as the key for the STRIPE_PUBLIC_KEY variable.
+      5. Click “Reveal test key token”
+      6. Copy the Secret key to your config/initializers/aakeys.rb file as the key for STRIPE_SECRET_KEY variable.
+      7. Go to Connect > Settings
+      8. Copy the Test mode client ID to your config/initializers/aakeys.rb file as the key for the STRIPE_CONNECT_CLIENT_ID variable.
+      9. You can run a test purchase by finding a perk to buy, using 4242424242424242 as the card number, and random information for the rest of the fields. Go back to the Developers tab to check for your successful API request.
