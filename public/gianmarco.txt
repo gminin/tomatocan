@@ -520,3 +520,6 @@ Tasks for week of December 31, 2018
 Wednesday, January 2, 2019
   - purchases/new
     - Rebuilding form with Stripe Elements on Stripe.js v3 instead of v2
+    
+Friday, January 4, 2019
+  - Tech support
