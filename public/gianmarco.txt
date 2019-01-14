@@ -542,3 +542,25 @@ Friday, January 11, 2019
       7. Go to Connect > Settings
       8. Copy the Test mode client ID to your config/initializers/aakeys.rb file as the key for the STRIPE_CONNECT_CLIENT_ID variable.
       9. You can run a test purchase by finding a perk to buy, using 4242424242424242 as the card number, and random information for the rest of the fields. Go back to the Developers tab to check for your successful API request.
+      
+========================================
+Tasks for week of January 14, 2019
+  - Upgrade from Stripe.js v2 to v3
+  - Write instructions for connecting Stripe test data to local machines and AWS S3 buckets to local machines
+  
+January 14, 2019
+  - Tech support
+  - Amazon AWS
+      1. Sign up for an Amazon Web Services account at https://aws.amazon.com/.
+      2. In the AWS console, go to Services > Storage > S3 (or just go to https://s3.console.aws.amazon.com/)
+      3. Go to IAM https://console.aws.amazon.com/iam/home?#/home and create a user besides root.
+      1. Give the new user Programmatic access and AWS Management Console access
+      2. Set Permissions by “Attaching existing policies directly” and selecting the first option on the list, “AdministratorAccess”
+      3. Click the provided sign-in link and sign in.
+      4. Open the IAM console again https://console.aws.amazon.com/iam/home?#/home and click on Users in the sidebar.
+      5. Click the user you created, then click Security Credentials.
+      6. You need to Create Access Key to get a new secret key which you can only see once — make sure to save it!
+      7. Take the access keys from this and replace the fake keys in app/initializers/aakeys.rb — the Access Key goes in AWS_KEY and the Secret Access Key goes in AWS_SECRET_KEY. 
+      8. In carrierwave.rb, change the config.fog_directory to the name of your bucket.
+      9. None of the uploaders currently save to S3 when in test or development environment; you can change this by setting storage to :fog instead of :file in the uploader you're testing.
+      
