@@ -566,3 +566,4 @@ Monday, January 14, 2019
       
 Tuesday, January 15, 2019
   - Added AWS_BUCKET environment variable for test AWS accounts
+  - Converting purchases.js.coffee to Stripe v3
