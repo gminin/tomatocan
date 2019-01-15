@@ -26,7 +26,7 @@ class ActiveSupport::TestCase
         }
         config.storage = :fog
         config.permissions = 0777
-        config.fog_directory  = 'authorprofile1'
+        config.fog_directory  => AWS_BUCKET
         config.fog_public     = true
         config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
     end

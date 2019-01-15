@@ -16,7 +16,7 @@ if Rails.env.development? || Rails.env.test?
     }
     config.storage = :fog
     config.permissions = 0777
-    config.fog_directory  = 'tomatocandev'
+    config.fog_directory  => AWS_BUCKET
     config.fog_public     = true
     config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
   end
@@ -34,7 +34,7 @@ if Rails.env.production?
     }
     config.storage = :fog
     config.permissions = 0777
-    config.fog_directory  = 'tomatocandev'
+    config.fog_directory  => ENV['AWS_BUCKET']
     config.fog_public     = true
     config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
 #    config.fog_host     = 'https://authorprofile.s3.amazonaws.com'

@@ -548,7 +548,7 @@ Tasks for week of January 14, 2019
   - Upgrade from Stripe.js v2 to v3
   - Write instructions for connecting Stripe test data to local machines and AWS S3 buckets to local machines
   
-January 14, 2019
+Monday, January 14, 2019
   - Tech support
   - Amazon AWS
       1. Sign up for an Amazon Web Services account at https://aws.amazon.com/.
@@ -560,7 +560,9 @@ January 14, 2019
       4. Open the IAM console again https://console.aws.amazon.com/iam/home?#/home and click on Users in the sidebar.
       5. Click the user you created, then click Security Credentials.
       6. You need to Create Access Key to get a new secret key which you can only see once — make sure to save it!
-      7. Take the access keys from this and replace the fake keys in app/initializers/aakeys.rb — the Access Key goes in AWS_KEY and the Secret Access Key goes in AWS_SECRET_KEY. 
-      8. In carrierwave.rb, change the config.fog_directory to the name of your bucket.
+      7. Take the access keys from this and replace the fake keys in app/initializers/aakeys.rb — the Access Key goes in AWS_KEY and the Secret Access Key goes in AWS_SECRET_KEY (you can also set this in your shell if that's easier for you.)
+      8. In app/initializers/aakeys.rb, change the AWS_BUCKET variable to the name of the bucket you created.
       9. None of the uploaders currently save to S3 when in test or development environment; you can change this by setting storage to :fog instead of :file in the uploader you're testing.
       
+Tuesday, January 15, 2019
+  - Added AWS_BUCKET environment variable for test AWS accounts
