@@ -1,3 +1,41 @@
+var stripe = Stripe('pk_fprfuCbYr4HZ63cxh7xs7ion08ekv');
+var elements = stripe.elements();
+
+var card = elements.create('card');
+
+card.mount('#card-element');
+
+function stripeTokenHandler(token) {
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+
+  form.submit();
+}
+
+function createToken() {
+  stripe.createToken(card).then(function(result) {
+  if (result.error) {
+      // Inform the user if there was an error
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+    } else {
+    // Send the token to your server
+    stripeTokenHandler(result.token);
+  }
+  });
+};
+
+
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  createToken();
+});
+
 jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   purchase.setupForm()

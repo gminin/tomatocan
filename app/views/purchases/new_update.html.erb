@@ -2,7 +2,7 @@
 
 <!--Creates instance of stripe.js-->
 <script>
-  var stripe = Stripe('pk_fprfuCbYr4HZ63cxh7xs7ion08ekv');
+  var stripe = Stripe(<%= STRIPE_PUBLIC_KEY %>);
   var elements = stripe.elements();
 </script>
 
@@ -31,3 +31,32 @@ Credit or debit card
 
 <input type="submit" class="submit" value="Submit Payment">
 </form>
+    
+    
+<!---------------- STRIPE V3 --------------->
+<% if @purchase.errors.any? %>
+  <%= pluralize(@purchase.errors.count, "error") %> prohibited this purchase from being saved.
+  <% @purchase.errors.full_messages.each do |msg| %> 
+    <%= msg %>
+  <% end %>
+<% end %>
+
+<%= form_for @purchase do |f| %>
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element">
+      <!-- a Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <% if(params[:merchandise_id].present?) %>
+    <%= f.submit "Purchase", class: "submit", value: "Submit Payment" %>
+  <% else %>
+    <%= f.submit "Donate", class: "submit", value: "Submit Payment" %>
+  <% end %>
+<% end %>
