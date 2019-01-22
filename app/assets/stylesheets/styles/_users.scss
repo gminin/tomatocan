@@ -1,8 +1,5 @@
-//This stylesheet for userpgtemplate.html.erb includes _merchsidebar.html.erb partial and _authorform.html.erb partial
+//This stylesheet for userpgtemplate.html.erb includes _authorform.html.erb partial
 
-//Page header "authorform"
-
-//Page header
 #profileBanner {
 	height: 300px;
 	margin-bottom: 40px;
@@ -52,20 +49,6 @@
 	#profileDescription {
 		//padding-left: 3px;
 	}
-}
-
-//Merch Sidebar styling
-#merchImage {
-    max-width: 100%;
-}
-#merchDescription {
-    max-width: 100%;
-}
-
-//Merch Sidebar style
-#merchSidebar {
-    max-height: 75vh;
-    overflow-y: scroll;
 }
 
 //Edit Profile style

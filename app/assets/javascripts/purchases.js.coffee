@@ -1,4 +1,5 @@
-var stripe = Stripe('pk_fprfuCbYr4HZ63cxh7xs7ion08ekv');
+###
+var stripe = Stripe(INSERT STRIPE KEY);
 var elements = stripe.elements();
 
 var card = elements.create('card');
@@ -27,14 +28,13 @@ function createToken() {
     stripeTokenHandler(result.token);
   }
   });
-};
-
 
 var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   createToken();
 });
+###
 
 jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))

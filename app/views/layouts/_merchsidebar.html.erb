@@ -76,11 +76,10 @@
             <% if (merch.deadline) != nil %>
               <% daysaway = (merch.deadline.to_date - Date.today.to_date).to_i %>
               <% if daysaway.nil? || daysaway.zero? %>
-                <td>Last day!</td>
+                <br><td>Last day!</td>
               <% elsif (daysaway <= 7) %>
-                <td>Only <%= ActionController::Base.helpers.pluralize(daysaway.to_s, 'day') %> left!</td>
+                <br><td>Only <%= ActionController::Base.helpers.pluralize(daysaway.to_s, 'day') %> left!</td>
               <% else %>
-                <td><%= ActionController::Base.helpers.pluralize(daysaway.to_s, 'day') %> left!</td>
               <% end %>
             <% end %>
 				
@@ -101,11 +100,10 @@
           <% if (merch.deadline) != nil %>
             <% daysaway = (merch.deadline.to_date - Date.today.to_date).to_i %>
               <% if daysaway.nil? || daysaway.zero? %>
-                <td>Last day!</td>
+                <br><td>Last day!</td>
               <% elsif (daysaway <= 7) %>
-                <td>Only <%= ActionController::Base.helpers.pluralize(daysaway.to_s, 'day') %> left!</td>
+                <br><td>Only <%= ActionController::Base.helpers.pluralize(daysaway.to_s, 'day') %> left!</td>
               <% else %>
-                <td><%= ActionController::Base.helpers.pluralize(daysaway.to_s, 'day') %> left!</td>
               <% end %>
             <% end %>
 				

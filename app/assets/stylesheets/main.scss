@@ -12,8 +12,9 @@
 @import "base/header.scss";
 @import "base/footer.scss";
 
-//Individual stylesheets loaded here
+//Individual stylesheets loaded here. Add them to pages with a stylesheet_link_tag.
 @import "styles/home.scss";
 @import "styles/new.scss";
 @import "styles/users.scss";
-@import "styles/panels.scss";
+@import "styles/maincalendar.scss";
+@import "styles/merchsidebar.scss";

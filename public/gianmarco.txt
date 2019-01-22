@@ -567,3 +567,17 @@ Monday, January 14, 2019
 Tuesday, January 15, 2019
   - Added AWS_BUCKET environment variable for test AWS accounts
   - Converting purchases.js.coffee to Stripe v3
+  
+========================================
+Tasks for week of January 21, 2019
+  - Finish Stripe upgrade
+  - Setting up email for password resets in testing?
+  - Add directions to readme
+  
+Monday, January 21, 2019
+  - Helped small adjustments to home page (scroll indicator, social button padding), removed extra row
+  - Rolled new Stripe test API keys
+  - Moved CSS out of _user.scss to individual sheets
+  - Removed "x days left" in merchsidebar if > 7 days
+  - Removed live keys from files :^)
+  
